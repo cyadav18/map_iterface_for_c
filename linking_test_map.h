@@ -14,6 +14,7 @@ bool Update(void * mainMap, char * key, void * value);
 void * Get(void * mainMap, char * key);
 void Delete(void *mainMap,char * key);
 void DeleteMap(void *mainMap);
+void * GetMap();
 
 #ifdef __cplusplus
 }

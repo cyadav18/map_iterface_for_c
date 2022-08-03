@@ -100,6 +100,20 @@ int main() {
     get = Get(maps,"student4");
     printStudent(get);
     
-
+    DeleteMap(maps);
+    get = Get(maps,"student4");
+    if (get == NULL){
+        printf("Map deleted \n");
+    }
+    
+    maps = GetMap();
+    Insert(maps,"student1",&s1);
+    get = Get(maps,"student1");
+    printStudent(get);
+    get = Get(maps,"student2");
+    if (get == NULL){
+        printf("student2 not found \n");
+    }
+    
   return 0;
 }

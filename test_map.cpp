@@ -3,9 +3,14 @@
 #include <iterator>
 #include <string>
 using namespace std;
+
 typedef  map<string, void *> mapType;
+
+mapType * mainmap;
+
 void * CreateMap() {
     map<string, void*> *mainMap = new map<string, void*>;
+    mainmap = mainMap;
     return mainMap;
 }
 
@@ -54,4 +59,12 @@ void DeleteMap(void *mainMap){
     (*mapPtr).clear();
     delete mapPtr;
     return;
+}
+
+void * GetMap(){
+    if (mainmap != nullptr){
+        return mainmap;
+    }else{
+        return CreateMap();
+    }
 }
