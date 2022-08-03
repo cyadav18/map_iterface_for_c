@@ -1,7 +1,7 @@
 #include <iostream>
 #include <map>
 #include <iterator>
-#include "test_map.h"
+#include "linking_test_map.h"
 using namespace std;
 
 struct Student {
